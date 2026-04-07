@@ -125,3 +125,6 @@ def main(page: ft.Page):
 # Comando para rodar o app
 if __name__ == "__main__":
     ft.app(target=main)
+
+
+
