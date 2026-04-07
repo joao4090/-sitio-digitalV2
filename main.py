@@ -116,6 +116,7 @@ def main(page: ft.Page):
         ft.Divider(height=40),
         ft.Text("LOTES ATIVOS:", weight="bold", size=18),
         lista_exibicao
+        
     )
 
     # Carregamento inicial
