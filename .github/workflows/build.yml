@@ -1,0 +1,27 @@
+name: Build Flet APK
+on:
+  push:
+    branches: [ principal ] # Note que mudei para 'principal' como está na sua foto
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install Flet and Build APK
+        run: |
+          pip install flet
+          flet build apk --project "Sitio Digital"
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: meu-sitio-app
+          path: build/apk/*.apk
