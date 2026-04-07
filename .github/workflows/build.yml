@@ -1,8 +1,7 @@
 name: Build Flet APK
 on:
   push:
-    branches: [ principal ] # Note que mudei para 'principal' como está na sua foto
-
+    branches: [ "principal" ]
 jobs:
   build:
     runs-on: ubuntu-latest
