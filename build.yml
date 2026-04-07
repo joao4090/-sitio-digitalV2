@@ -1,8 +1,7 @@
 name: Build Flet APK
 on:
   push:
-    branches: [ main ] # O robô roda toda vez que você envia código para a branch 'main'
-
+    branches: [ "principal" ]
 jobs:
   build:
     runs-on: ubuntu-latest
